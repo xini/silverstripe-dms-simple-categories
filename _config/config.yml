@@ -1,0 +1,9 @@
+---
+name: dmscategories
+---
+DMSDocument:
+  extensions:
+   ['DMSDocumentExtension']
+DMSTag:
+  extensions:
+   ['DMSTagExtension']
