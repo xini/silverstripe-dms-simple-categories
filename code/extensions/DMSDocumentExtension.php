@@ -3,7 +3,7 @@ class DMSDocumentExtension extends DataExtension
 {
     
     public static $db = array(
-        'ShowCategoryFrontend' => 'Boolean(0)',
+        'ShowCategoryFrontend' => 'Boolean(1)',
     );
 
     public function updateCMSFields(FieldList $fields)
@@ -32,7 +32,7 @@ class DMSDocumentExtension extends DataExtension
 
             $fields->insertAfter($selectTags, 'Description');
 
-            $fields->insertAfter(CheckboxField::create('ShowCategoryFrontend', _t('DMSDocumentExtension.ShowCategoryFrontend', 'Show document category in frontend?')), 'DocumentTags');
+            $fields->insertAfter(CheckboxField::create('ShowCategoryFrontend', _t('DMSDocumentExtension.ShowCategoryFrontend', 'Show document category in frontend?')), 'DocumentCategory');
         }
     }
 
