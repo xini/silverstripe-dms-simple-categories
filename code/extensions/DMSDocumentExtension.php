@@ -18,7 +18,7 @@ class DMSDocumentExtension extends DataExtension
             };
 
             $selectTags = DropdownField::create(
-                'DocumentCategory',
+                'DocumentCategoryID',
                 _t('DMSDocumentExtension.Category', 'Category'),
                 $srcTags()
             )->useAddNew(
