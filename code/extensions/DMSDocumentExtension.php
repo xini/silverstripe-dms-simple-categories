@@ -40,8 +40,8 @@ class DMSDocumentExtension extends DataExtension
     {
         $changedFields = $this->owner->getChangedFields(false, 1);
 
-        if (array_key_exists("DocumentCategory", $changedFields)) {
-            $currentTags = explode(',', $this->owner->getField('DocumentCategory'));
+        if (array_key_exists("DocumentCategoryID", $changedFields)) {
+            $currentTags = explode(',', $this->owner->getField('DocumentCategoryID'));
             $oldTags = DMSTag::get()
                 ->innerJoin("DMSDocument_Tags", "\"DMSDocument_Tags\".\"DMSTagID\" = \"DMSTag\".\"ID\" AND \"DMSDocument_Tags\".\"DMSDocumentID\" = " . $this->owner->ID)->column();
             
