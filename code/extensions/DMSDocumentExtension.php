@@ -28,7 +28,7 @@ class DMSDocumentExtension extends DataExtension
                     TextField::create('Category', _t('DMSDocumentExtension.Category', 'Category *')),
                     HiddenField::create('MultiValue', null, 0)
                 )
-            );
+            )->setEmptyString(_t('DMSDocumentExtension.EmptyString', '- please select -'));
 
             $fields->insertAfter($selectTags, 'Description');
 
