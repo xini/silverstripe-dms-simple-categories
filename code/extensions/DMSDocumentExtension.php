@@ -32,7 +32,7 @@ class DMSDocumentExtension extends DataExtension
 
             $fields->insertAfter($selectTags, 'Description');
 
-            $fields->insertAfter(CheckboxField::create('ShowCategoryFrontend', _t('DMSDocumentExtension.ShowCategoryFrontend', 'Show document category in frontend?')), 'DocumentCategory');
+            $fields->insertAfter(CheckboxField::create('ShowCategoryFrontend', _t('DMSDocumentExtension.ShowCategoryFrontend', 'Show document category in frontend?')), 'DocumentCategoryID');
         }
     }
 
