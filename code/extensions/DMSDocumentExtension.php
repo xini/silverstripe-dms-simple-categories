@@ -68,4 +68,12 @@ class DMSDocumentExtension extends DataExtension
     {
         $this->owner->removeAllTags();
     }
+    
+    public function getCategoryTitle()
+    {
+        if (($tags = $this->owner->Tags()) && $tags->exists()) {
+            return $tags->first()->Category;
+        }
+        return null;
+    }
 }
