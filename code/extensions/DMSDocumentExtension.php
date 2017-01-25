@@ -16,7 +16,7 @@ class DMSDocumentExtension extends DataExtension
                 }
                 return $tags;
             };
-            $currentTag = $this->owner->Tags() ? $this->owner->Tags()->first()->ID : 0;
+            $currentTag = $this->owner->Tags() && $this->owner->Tags()->exists() ? $this->owner->Tags()->first()->ID : 0;
 
             $selectTags = DropdownField::create(
                 'DocumentCategoryID',
